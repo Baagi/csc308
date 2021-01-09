@@ -1,5 +1,21 @@
 import React from 'react'
 
+function TableBody(props) {
+   const rows = props.characterData.map((row, index) => {
+      return (
+         <tr key={index}>
+            <td> {row.name} </td>
+            <td> {row.job} </td>
+         </tr>
+      )
+   })
+   return (
+      <tbody>
+         {rows}
+      </tbody>
+   );
+}
+
 function TableHeader() {
    return (
       <thead>
@@ -8,22 +24,6 @@ function TableHeader() {
             <th>Job</th>
          </tr>
       </thead>
-   );
-}
-
-function TableBody(props) {
-   const rows = props.characterData.map((row, index) => {
-      return (
-         <tr key={index}>
-            <td>{row.name}</td>
-            <td>{row.job}</td>
-         </tr>
-      );
-   });
-   return (
-      <tbody>
-         {rows}
-      </tbody>
    );
 }
 
@@ -36,4 +36,4 @@ function Table(props) {
    );
 }
 
-export default Table;
+export default Table; 

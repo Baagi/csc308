@@ -1,6 +1,5 @@
-import React from 'react'
+import React from 'react';
 import Table from './Table'
-import './index.css'
 
 const characters = [
    {
@@ -26,7 +25,7 @@ function MyApp() {
       <div className="container">
          <Table characterData={characters} />
       </div>
-   )
+   );
 }
 
-export default MyApp;
+export default MyApp; 
